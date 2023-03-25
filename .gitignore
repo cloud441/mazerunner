@@ -1,6 +1,7 @@
 # Personal files to avoid
 
 .idea/
+poetry.lock
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
