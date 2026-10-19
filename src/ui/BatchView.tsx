@@ -214,7 +214,7 @@ export function BatchView() {
               {fmt(completed.rows.length)} runs · {SCENARIOS.find((s) => s.id === completed.config.scenario)?.label} · seed{' '}
               {completed.config.baseSeed} · {(completed.elapsedMs / 1000).toFixed(1)} s
             </p>
-            <BatchResults rows={completed.rows} algorithmIds={completed.config.algorithmIds} />
+            <BatchResults key={completed.config.baseSeed} rows={completed.rows} algorithmIds={completed.config.algorithmIds} />
           </>
         ) : (
           !running && (

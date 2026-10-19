@@ -210,8 +210,8 @@ export function RaceView() {
             <span className="heat-legend">
               visits
               {HEAT_STEPS.map((s, i) => {
-                const upper = HEAT_STEPS[i + 1]?.min - 1
-                const range = upper === undefined || Number.isNaN(upper) ? `${s.min}+` : upper > s.min ? `${s.min}–${upper}` : `${s.min}`
+                const next = HEAT_STEPS[i + 1]?.min
+                const range = next === undefined ? `${s.min}+` : next - 1 > s.min ? `${s.min}–${next - 1}` : `${s.min}`
                 return (
                   <span key={s.min}>
                     <i style={{ background: s.color }} aria-hidden />
